@@ -12,4 +12,5 @@ The initial step in this project involved comprehending the project's objectives
 
 ### Task 1.3 Stage and Commit the template to git
 - To accomplish this, firstly, the files were uploaded to a folder named 'MarketPeak_Ecommerce'. Then, the following commands were executed:
-- Adding Template to Git: 
+- Add template to Git: The "git add ." command was used to stage the template files for commit. This command indicates the inclusion of all content within the current folder into Git, effectively adding the template to version control.
+- Setting global configuration with name and email: The command git config --global user.name was utilized to set up my Git username, linking my commits with the corresponding name. This enables other users to pinpoint who made specific changes to the repository. Additionally, the command git config --global user.email was employed to configure my Git email address, serving as an identifier associated with my Git username.
