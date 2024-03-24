@@ -51,3 +51,15 @@ The initial step in this project involved comprehending the project's objectives
   - Then tested the changes
   - It works again!
   - End
+
+
+    ### Challenges:
+    I encountered a challenge,trying to create the 'development branch', to resolve this I manually created the branch on github, by following the following steps;
+    - Navigate to the Repository: I Opened the repository on GitHub where I want to create the new branch.
+    - Navigated to the Branch Dropdown: At the top of the repository's page, there's  a dropdown menu that displays the current branch name. I clicked on this dropdown menu.
+    - Entered the  Branch Name - 'development'
+    - Created the Branch: After typing the branch name, I pressed Enter, and GitHub automatically  created the new branch for you.
+
+      Challenge (2):
+     - I encountere an error, trying to run the 'git push origin development', to resolve this, I ran the 'git pull origin development' command first. This command  workflow allows me to manage changes locally and then push them to the remote repository on GitHub when ready.
+
