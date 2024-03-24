@@ -22,4 +22,32 @@ The initial step in this project involved comprehending the project's objectives
 - Firstly i signed in to the AWS Management Console, then navigated to the EC2 dashboard, and clicked  on "Launch Instance" to start the instance creation wizard, i chose an Amazon Machine Image (AMI)- Amazon Linux server. I then selected an instance type based on my workload needs. After that, i configured the instance details such as network settings, storage, tags, and security groups. Additionally , I configured the security groups to permit specific types of inbound traffic. This involved opening ports for HTTP (port 80), HTTPS (port 443), and SSH (port 22). This configuration ensures secure handling of web traffic for the website and enables SSH access for managing the instance via SSH connectivity. After the security inbound roles have to configured, I created a new key pair for SSH access to the instance.Then, I clicked "Launch Instances" to finalize the instance creation process. Following the successful launch of the instance, I established an SSH connection to it using the key pair obtained from AWS during the instance creation phase.
 
 ### 2.2 Clone the repository on the linux server
+- To ensure seamless hosting on AWS and accommodate all future changes from Git, it was imperative to clone the Git repository onto the instance.
+- This was achieved by executing the "git clone" command, followed by pasting the SSH address copied from GitHub. This process effectively replicated the repository onto the EC2 instance.
 
+### 2.3 Install a web server on EC2 
+- To host the website on ec2 , i used the apache http server, for site hosting
+- following the steps outlined in the note, I installed httpd, initiated its start, and enabled it to host the downloaded website template on the EC2 instance.
+
+### 2.4 Configure httpd for the website
+- To host the website using Apache, it's crucial to direct httpd to the directory containing the website template.
+- This is accomplished by executing the command "sudo cp ~/MarketPeak_Ecommerce/* /var/www/html/", which copies the files from the specified directory to the httpd structure, enabling httpd to host the website.
+-  Once this step is completed successfully, the next task is to verify that the hosted website can be accessed.
+-  To do so, the public IP address of the EC2 instance, was manually copied and pasted directly into a web browser's address bar, to successfully  access to the downloaded template.
+
+  ### Continuous Integration and Deployment workflow
+  - I terminated the ec2 terminal
+  - Created a new branch on the remote repository  named 'development'
+  - Switched to the developement branch
+  - Commited my changes with comment
+  - Pushed the changes to github - origin
+  - Switched back to main branch
+  - Merged the development branch with the main
+  - Pushed the changes back to the origin
+  - For the changes to be pull into the product environment
+  - I opened a new ec2 instance, and connected using ssh
+  - Pulled the changes using 'git pull origin main'
+  - Reloaded my apache2
+  - Then tested the changes
+  - It works again!
+  - End
